@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-base: #050505;
+    --bg-secondary: #0D0D0D;
+    --bg-elevated: #111318;
+    --border-subtle: #22252B;
+    --border-hover: #333842;
+    --blue-primary: #0047AB;
+    --blue-electric: #1E6BFF;
+    --blue-glow: rgba(0, 71, 171, 0.3);
+    --text-primary: #F5F7FA;
+    --text-secondary: #9CA3AF;
+    --text-muted: #6B7280;
+  }
+
+  body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    selection-background-color: #0047AB;
+    selection-color: #ffffff;
+  }
+
+  ::selection {
+    background: rgba(0, 71, 171, 0.4);
+    color: #F5F7FA;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #22252B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333842;
+}
+
+/* HydraDB-inspired Grid and Glow utilities */
+.hydra-grid {
+  background-image: 
+    linear-gradient(to right, rgba(34, 37, 43, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(34, 37, 43, 0.25) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.hydra-dots {
+  background-image: radial-gradient(rgba(34, 37, 43, 0.5) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.blue-glow {
+  box-shadow: 0 0 35px -5px rgba(0, 71, 171, 0.35);
+}
+
+.blue-glow-subtle {
+  box-shadow: 0 0 20px -3px rgba(0, 71, 171, 0.18);
+}
+
+.blue-border-glow {
+  box-shadow: 0 0 0 1px #0047AB, 0 0 20px rgba(0, 71, 171, 0.25);
+}
